@@ -1,0 +1,11 @@
+@import "../../../../Containers/Props.scss";
+
+.Cards {
+	@include desktop {
+		grid-area: cards;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		overflow: visible;
+	}
+}

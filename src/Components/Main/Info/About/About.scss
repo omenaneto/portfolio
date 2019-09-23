@@ -1,0 +1,80 @@
+@import "../../../../Containers/Props.scss";
+
+.About {
+	text-shadow: $text-shadow;
+	h3 {
+		text-transform: uppercase;
+	}
+	p {
+		text-align: center;
+		@include desktop {
+			text-align: justify;
+		}
+	}
+	div {
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: .8em;
+		color: color(primary);
+		background-color: color(accent);
+		padding: .05em 1em;
+		margin-bottom: .5em;
+		line-height: 2em;
+		border-radius: 300px;
+		transition: $short-transition;
+		text-shadow: none;
+		box-shadow: $text-shadow;
+	}
+	div:hover {
+		transform: scale(1.1);
+	}
+	div:active {
+		transform: scale(.9);
+	}
+	input,
+	textarea {
+		background: none;
+		width: 80%;
+		height: 2em;
+		font-family: inherit;
+		border: none;
+		border-bottom: 1px solid color(accent);
+		opacity: .5;
+		transition: $short-transition;
+		@include desktop {
+			width: 300px;
+		}
+	}
+	input::placeholder,
+	textarea::placeholder {
+		color: color(accent);
+		opacity: .5;
+	}
+	input:focus,
+	textarea:focus {
+		opacity: 1;
+		outline: none;
+		border: none;
+		font-size: 1em;
+		width: 90%;
+		padding: 1em;
+		color: color(accent);
+		background-color: color(primary);
+		border-radius: 25px;
+		box-shadow: $small-shadow;
+		@include desktop {
+			width: 500px;
+		}
+	}
+	textarea {
+		min-height: 4em;
+		height: fit-content;
+		resize: none;
+	}
+	textarea:focus {
+		height: 6em;
+		resize: none;
+	}
+}

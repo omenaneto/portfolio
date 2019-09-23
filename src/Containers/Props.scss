@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
+
+// Variables ===============================
+$colors: (
+	primary:#fff203,
+	cards: #202020,
+	primary-inv: #fff20300,
+	accent:#000,
+	bg: linear-gradient(120deg, #fff203, #efe30f),
+	primarydark:#efe30f,
+	shadow: #b3ab2530,
+	scroll: #20202033
+);
+
+@function color($chosenColor) {
+	@return map-get($colors, $chosenColor);
+}
+
+$shadow: 0px 10px 30px color(shadow);
+$small-shadow: 0px 10px 15px color(shadow);
+$text-shadow: 0px 5px 10px color(shadow);
+
+$short-transition: .3s all ease-in-out;
+$bg-transition: 1s all ease-in-out;
+$mobile-pad: 20px;
+$desk-pad: 10%;
+$linkbox: .5em;
+$border: 3px;
+
+//Media Queries ===============================
+$desktop: 920px;
+
+@mixin desktop {
+	@media (min-width: $desktop) {
+		@content;
+	}
+}
+
+$tablet: 625px;
+
+@mixin tablet {
+	@media (min-width: $tablet) {
+		@content;
+	}
+}
+
+$tablet-portrait: 1290px;
+
+@mixin tablet-portrait {
+	@media (min-height: $tablet-portrait) {
+		@content;
+	}
+}
+
+$fullhd: 1600px;
+
+@mixin fullhd {
+	@media (min-width: $fullhd) {
+		@content;
+	}
+}
+
+$ultrawide: 1925px;
+
+@mixin ultrawide {
+	@media (min-width: $ultrawide) {
+		@content;
+	}
+}
+
+//ANIMATIONS ===============================
+@keyframes menuenter {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes contententerup {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes contententerleft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes contententerright {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes clickAnim {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(.9);
+	}
+}
+
+@keyframes btnfloating {
+	0% {
+		transform: translateY(3%) scale(1.025);
+	}
+	50% {
+		transform: translateY(-3%) scale(.975);
+	}
+	100% {
+		transform: translateY(3%) scale(1.025);
+	}
+}
+
+@keyframes bgfloating {
+	0% {
+		transform: translateY(2%) translatex(-2%) rotateZ(2deg);
+	}
+	50% {
+		transform: translateY(-2%) translatex(2%) rotateZ(-2deg);
+	}
+	100% {
+		transform: translateY(2%) translatex(-2%) rotateZ(2deg);
+	}
+}

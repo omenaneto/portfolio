@@ -1,0 +1,97 @@
+@import "../../../Containers/Props.scss";
+
+.Asside {
+	height: fit-content;
+	padding: 0 $mobile-pad;
+	img {
+		margin-top: 3em;
+		width: 100%;
+		z-index: -1;
+		@include desktop {
+			position: absolute;
+			width: auto;
+			margin: auto 0;
+			overflow: hidden;
+		}
+	}
+	@include desktop {
+		height: 100%;
+		width: 100%;
+		margin: auto 0;
+		justify-self: center;
+		padding: 0;
+	}
+}
+
+.Asside.Resume {
+	hr {
+		border-color: color(accent);
+		background-color: color(accent);
+		border-radius: 300px;
+		width: 10%;
+	}
+	h3 {
+		font-size: 2em;
+	}
+	.experience {
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: 0;
+		.timeline {
+			display: none;
+		}
+	}
+	li {
+		font-size: .9em;
+	}
+	li:last-child {
+		margin-bottom: 1em;
+	}
+	.box {
+		width: 80%;
+		margin: 0 auto;
+		background-color: color(primary);
+		padding: 5% 10%;
+		display: block;
+		margin-bottom: 5%;
+		border-radius: 25px;
+		box-shadow: $shadow;
+		animation: contententerup .5s 1 0s linear;
+	}
+	@include desktop {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: auto;
+
+		hr {
+			width: 100%;
+		}
+		h3 {
+			margin-top: 10%;
+		}
+		li {
+			font-size: .9em;
+		}
+		li:last-child {
+			margin-bottom: 1em;
+		}
+		.box {
+			overflow-y: scroll;
+			width: 70%;
+			height: 87vh;
+			padding: 0 10%;
+			margin-top: 2vh;
+			margin-bottom: 0;
+			margin-right: 0;
+			margin-left: auto;
+		}
+
+		.box::-webkit-scrollbar-button {
+			visibility: visible;
+			display: block;
+			height: 12.5px;
+			background: none;
+		}
+	}
+}

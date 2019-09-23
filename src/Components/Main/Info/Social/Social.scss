@@ -1,0 +1,51 @@
+@import "../../../../Containers/Props.scss";
+
+.Social {
+	grid-area: social;
+	padding: 0;
+	margin: auto 0;
+
+	li {
+		display: inline-block;
+		list-style-type: none;
+		margin: 0 .5em;
+		text-align: left;
+	}
+	li:first-child {
+		margin-left: 0;
+	}
+	li:last-child {
+		margin-right: 0;
+	}
+	a {
+		display: inline-block;
+		font-size: 2.25em;
+		text-align: left;
+		color: color(accent);
+		text-shadow: $text-shadow;
+		@include tablet {
+			font-size: 3em;
+		}
+
+		margin: 0;
+		padding: 0;
+		transition: $short-transition;
+	}
+
+	a:hover {
+		transform: scale(1.1);
+	}
+	a:active {
+		transform: scale(.9);
+	}
+	@include desktop {
+		margin: 0;
+	}
+	li:hover {
+		.tooltiptext {
+			display: inline-block;
+			transform: scale(.9);
+			opacity: 100;
+		}
+	}
+}

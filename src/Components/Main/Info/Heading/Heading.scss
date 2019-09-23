@@ -1,0 +1,53 @@
+@import "../../../../Containers/Props.scss";
+
+.Heading {
+	text-shadow: $text-shadow;
+	.Title {
+		margin: 0;
+		line-height: 1em;
+		font-size: 3em;
+		font-weight: bold;
+		padding: $mobile-pad 0;
+		@include tablet {
+			font-size: 5em;
+		}
+		@include desktop {
+			font-size: 6.5em;
+		}
+	}
+	hr {
+		margin: 0 auto;
+		width: 10%;
+		height: $border;
+		background-color: color(accent);
+		border-radius: 30px;
+		border: none;
+		box-shadow: $text-shadow;
+		@include tablet {
+			margin: 1em auto;
+			height: 5px;
+		}
+		@include desktop {
+			margin: $mobile-pad 0;
+		}
+	}
+	.SubTitle {
+		margin: .5em 0;
+		font-size: 1.4em;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: $mobile-pad 0;
+		@include tablet {
+			font-size: 2em;
+		}
+		@include tablet-portrait {
+			font-size: 2em;
+		}
+		@include desktop {
+			font-size: 1.8em;
+		}
+		@include fullhd {
+			font-size: 2.5em;
+		}
+	}
+}

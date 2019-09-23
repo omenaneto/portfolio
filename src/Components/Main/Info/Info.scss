@@ -1,0 +1,17 @@
+@import "../../../Containers/Props.scss";
+
+.Info {
+	.Heading {
+		grid-area: heading;
+	}
+
+	.Social {
+		grid-area: social;
+	}
+	.About {
+		grid-area: about;
+	}
+	.Cta {
+		grid-area: cta;
+	}
+}

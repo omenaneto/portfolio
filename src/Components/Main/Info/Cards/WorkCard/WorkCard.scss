@@ -1,0 +1,76 @@
+@import "../../../../../Containers/Props.scss";
+
+a.WorkCard {
+	display: inline-block;
+	margin: 1em auto;
+	padding: 0;
+	border-radius: 25px;
+	overflow: hidden;
+	box-shadow: $small-shadow;
+	font-size: 1em;
+	width: 80%;
+	max-width: 350px;
+	transition: $short-transition;
+	animation: contententerup .5s 1 0s linear;
+	background-color: color(primary);
+	div.cardContent {
+		padding: 2em;
+		text-align: justify;
+		h4 {
+			font-size: 1.2em;
+			margin: .5em 0;
+			margin-top: 0;
+			text-transform: capitalize;
+		}
+		p {
+			font-weight: 400;
+			font-size: .9em;
+		}
+	}
+
+	div.cardImage {
+		height: 150px;
+		margin: 0;
+		background-position-x: center;
+		background-size: cover;
+	}
+
+	div.About {
+		padding: 0;
+		margin: 0;
+	}
+
+	div.tag {
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: .8em;
+		color: color(primary);
+		background-color: color(accent);
+		padding: .05em 1em;
+		margin: .5em;
+		border-radius: 300px;
+		transition: $short-transition;
+		text-shadow: none;
+		box-shadow: none;
+		text-transform: capitalize;
+	}
+
+	@include tablet {
+		margin: 1em;
+	}
+	@include desktop {
+		display: block;
+		margin: .5em;
+		max-width: 300px;
+		div.cardContent {
+		}
+	}
+}
+.WorkCard:hover {
+	transform: scale(1.1);
+}
+.WorkCard:active {
+	transform: scale(.9);
+}

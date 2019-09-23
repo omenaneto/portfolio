@@ -1,0 +1,95 @@
+@import "../../Containers/Props.scss";
+
+.Bg {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: -12;
+	top: 0;
+	right: 0;
+	background-image: color(bg);
+}
+.mobileBg {
+	transition: $bg-transition;
+	margin: 0;
+	padding: 0;
+	width: 80%;
+	position: fixed;
+	bottom: -5%;
+	left: 40%;
+	z-index: -12;
+	transform: rotateZ(-100deg);
+	@include tablet {
+		display: none;
+	}
+	animation: bgfloating 10s infinite 0s ease-in-out;
+}
+.desktopBg {
+	transition: $bg-transition;
+	display: none;
+	@include tablet {
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+		position: fixed;
+		bottom: -30%;
+		left: 40%;
+		z-index: -12;
+		transform: rotateZ(0deg);
+	}
+	@include fullhd {
+		width: 80vw;
+		z-index: -12;
+	}
+	animation: bgfloating 10s infinite 0s ease-in-out;
+}
+.desktopProfile {
+	transition: $bg-transition;
+	display: none;
+	@include tablet {
+		display: block;
+		margin: 0;
+		padding: 0;
+		left: 25%;
+		bottom: 0%;
+		width: 50%;
+		position: fixed;
+		z-index: -10;
+	}
+
+	@include desktop {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		height: 95vh;
+		left: inherit;
+		right: 0%;
+		bottom: -10%;
+		position: fixed;
+		z-index: -10;
+	}
+	@include fullhd {
+		height: 115vh;
+		right: -0%;
+		bottom: -25%;
+		z-index: -10;
+	}
+	@include tablet-portrait {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		height: 85vh;
+		left: -15%;
+		bottom: 0%;
+		position: fixed;
+		z-index: -10;
+	}
+	@include ultrawide {
+		right: 15%;
+		bottom: -25%;
+	}
+}

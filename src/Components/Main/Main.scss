@@ -1,0 +1,345 @@
+@import "../../Containers/Props.scss";
+
+.Main {
+	@include desktop {
+		height: 100%;
+		overflow: visible;
+		grid-area: main;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "info asside";
+		margin: 0;
+		align-content: stretch;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.Info {
+		.Heading {
+			.Title {
+				animation: contententerup .5s 1 0s linear;
+			}
+			hr {
+				animation: contententerup .5s 1 0s linear;
+			}
+			.SubTitle {
+				animation: contententerup .5s 1 0s linear;
+			}
+		}
+		.About {
+			animation: contententerup .5s 1 0s linear;
+		}
+		.Social {
+			animation: contententerup .5s 1 0s linear;
+		}
+		.Cta {
+			animation: contententerup .5s 1 0s linear;
+		}
+		overflow: visible;
+
+		@include desktop {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-around;
+			align-items: flex-start;
+		}
+	}
+}
+.Main.Home {
+	@include desktop {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "asside info";
+		margin: 0;
+		text-align: right;
+	}
+	.Asside {
+		height: 0;
+	}
+	.Info {
+		@include desktop {
+			margin-bottom: 0;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-around;
+			align-items: flex-end;
+			.Title {
+				animation: contententerright .5s 1 0s linear;
+			}
+			hr {
+				margin-left: auto;
+				margin-right: 0;
+				animation: contententerright .5s 1 0s linear;
+			}
+			.SubTitle {
+				animation: contententerright .5s 1 0s linear;
+			}
+			.Social {
+				animation: contententerright .5s 1 0s linear;
+			}
+			.Cta {
+				animation: contententerright .5s 1 0s linear;
+			}
+		}
+	}
+	.desktopProfile {
+		@include desktop {
+			right: 45%;
+		}
+		@include tablet-portrait {
+			right: 45%;
+		}
+		@include fullhd {
+			right: 45%;
+		}
+	}
+	.desktopBg {
+		@include desktop {
+			left: -40%;
+			bottom: -15%;
+			transform: rotateZ(60deg) scale(1.2);
+		}
+	}
+}
+
+.Main.Resume {
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	@include desktop {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "info asside";
+		margin: 0;
+	}
+
+	.Info {
+		padding: 0 $mobile-pad;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		.Heading {
+			.Title {
+				font-size: 2.5em;
+			}
+			.SubTitle {
+				font-size: 1.1em;
+			}
+		}
+		@include desktop {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			padding: 0;
+			.Heading {
+				.Title {
+					font-size: 5em;
+					padding-bottom: 0;
+					animation: contententerleft .5s 1 0s linear;
+				}
+				hr {
+					animation: contententerleft .5s 1 0s linear;
+				}
+				.SubTitle {
+					font-size: 1.5em;
+					padding-top: 0;
+					padding-bottom: 0;
+					animation: contententerleft .5s 1 0s linear;
+				}
+			}
+			.About {
+				animation: contententerleft .5s 1 0s linear;
+			}
+			.Social {
+				animation: contententerleft .5s 1 0s linear;
+			}
+		}
+	}
+	.Cta {
+		margin-bottom: 2em;
+		margin-top: 2em;
+		position: inherit;
+		@include desktop {
+			margin-top: auto;
+			margin-bottom: 1em;
+			animation: contententerleft .5s 1 0s linear;
+		}
+	}
+
+	.desktopProfile {
+		opacity: 0;
+		bottom: -100%;
+		@include tablet {
+			opacity: 0;
+		}
+		@include desktop {
+			opacity: 0;
+		}
+		@include tablet-portrait {
+			opacity: 0;
+		}
+		@include fullhd {
+			opacity: 0;
+		}
+	}
+	.desktopBg {
+		@include desktop {
+			bottom: -30%;
+			left: 40%;
+			transform: rotateZ(-60deg);
+		}
+	}
+	.mobileBg {
+		bottom: 0%;
+		left: -60%;
+		transform: rotateZ(0deg);
+	}
+}
+
+.Main.Work {
+	@include desktop {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "info info";
+		margin: 0;
+		overflow-y: overlay;
+		.Info {
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr;
+			grid-template: "heading" "cards";
+		}
+	}
+
+	.Asside {
+		display: none;
+	}
+	.desktopProfile {
+		opacity: 0;
+
+		bottom: -100%;
+		@include tablet {
+			opacity: 0;
+		}
+		@include desktop {
+			opacity: 0;
+		}
+		@include tablet-portrait {
+			opacity: 0;
+		}
+		@include fullhd {
+			opacity: 0;
+		}
+	}
+	.desktopBg {
+		@include desktop {
+			left: 0%;
+			bottom: -10%;
+			transform: rotateZ(-20deg) scale(1.1);
+		}
+	}
+	.mobileBg {
+		bottom: 0%;
+		left: -10%;
+		transform: rotateZ(30deg);
+	}
+}
+
+.Main.Contact {
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	@include desktop {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "info asside";
+		margin: 0;
+	}
+
+	.Info {
+		padding: 0 $mobile-pad;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		.Heading {
+			.Title {
+				font-size: 2.5em;
+			}
+			hr {
+			}
+			.SubTitle {
+				font-size: 1.1em;
+			}
+		}
+		@include desktop {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			padding: 0;
+			.Heading {
+				.Title {
+					font-size: 5em;
+					animation: contententerleft .5s 1 0s linear;
+				}
+				hr {
+					animation: contententerleft .5s 1 0s linear;
+				}
+				.SubTitle {
+					font-size: 1.5em;
+					animation: contententerleft .5s 1 0s linear;
+				}
+			}
+			.About {
+				margin: auto 0;
+				animation: contententerleft .5s 1 0s linear;
+			}
+			.Social {
+				animation: contententerleft .5s 1 0s linear;
+			}
+		}
+		@include fullhd {
+			Title {
+				font-size: 6em;
+			}
+			.SubTitle {
+				font-size: 2em;
+			}
+		}
+	}
+	.Cta {
+		margin-bottom: 2em;
+		margin-top: 2em;
+		position: inherit;
+		@include desktop {
+			margin-top: 0;
+			margin-bottom: auto;
+			animation: contententerleft .5s 1 0s linear;
+		}
+	}
+
+	.desktopBg {
+		@include desktop {
+			left: 35%;
+			bottom: 0%;
+			transform: rotateZ(-30deg) scale(1.1);
+		}
+	}
+	.desktopProfile {
+		@include desktop {
+			left: 40%;
+		}
+		@include tablet-portrait {
+			left: 30%;
+		}
+		@include ultrawide {
+			right: 20%;
+		}
+	}
+	.mobileBg {
+		bottom: -30%;
+		left: -10%;
+		transform: rotateZ(30deg);
+	}
+}
+
+.Info {
+	grid-area: info;
+}
+.Asside {
+	grid-area: asside;
+}

@@ -1,0 +1,229 @@
+@import "../../Containers/Props.scss";
+
+.Header {
+	padding: 1em;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include desktop {
+		padding: 1em 0;
+		position: relative;
+		background: none;
+	}
+	@include tablet-portrait {
+		position: relative;
+		background: none;
+	}
+
+	.nav-menu {
+		position: fixed;
+		z-index: 10;
+		background-color: color(primary);
+		background-image: color(bg);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-top: 4em;
+		text-align: right;
+		list-style-type: none;
+		animation: menuenter .5s 1 0s linear;
+		ul {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		li {
+			transition: $short-transition;
+			display: block;
+			padding: $mobile-pad 0;
+
+			width: 100%;
+		}
+		li.highlighted {
+			background: color(accent);
+
+			h6 {
+				color: color(primary);
+			}
+		}
+		h6 {
+			margin: 0;
+			padding: 0;
+			padding-right: $mobile-pad;
+			font-size: 1em;
+			cursor: pointer;
+			transition: $short-transition;
+		}
+		li:hover {
+		}
+		@include desktop {
+			li:hover {
+				transform: scale(1.1);
+			}
+			li:active {
+				transform: scale(.9);
+			}
+		}
+		li.Language {
+			position: absolute;
+			display: block;
+			bottom: $mobile-pad;
+			right: $mobile-pad;
+			border: 3px solid color(accent);
+			border-radius: 300px;
+			transition: $short-transition;
+			text-align: center;
+			width: auto;
+			margin-right: 0;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: 0;
+			padding: 0;
+			h6 {
+				padding: .3em 1em;
+				font-size: 1em;
+				display: inline-block;
+				margin: .3em;
+				transition: $short-transition;
+				text-align: center;
+			}
+			h6.highlighted {
+				display: inline-block;
+				padding: .3em 1em;
+				color: color(primary);
+				margin: .3em;
+				border-radius: 300px;
+				background-color: color(accent);
+				transition: $short-transition;
+			}
+		}
+		li.Language:hover {
+			font-size: 1em !important;
+			transform: scale(1.1);
+		}
+		li.Language:active {
+			font-size: 1em !important;
+			h6 {
+				transform: scale(.9);
+			}
+		}
+	}
+
+	@include desktop {
+		.nav-menu {
+			text-align: center;
+			display: block;
+			position: inherit;
+			text-align: right;
+			margin: 0;
+			padding: 0;
+			background: none;
+
+			ul {
+				display: inline;
+			}
+			h6 {
+				font-size: 1em;
+				width: auto;
+				margin: 0;
+				padding: .1em .5em;
+			}
+			li {
+				width: auto;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				margin-left: 3em;
+			}
+			li:first-child {
+				margin-left: 0;
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+			li.highlighted {
+				padding: .6em 1.2em;
+				border-radius: 300px;
+			}
+			li:hover {
+				font-size: 1em;
+			}
+			li.Language {
+				position: inherit;
+				display: inline-block;
+				margin-left: 3em;
+				margin-bottom: 0;
+				h6 {
+					padding: .3em 1em;
+				}
+				h6.highlighted {
+					padding: .3em 1em;
+				}
+			}
+		}
+
+		.Menu {
+			display: none !important;
+		}
+	}
+	@include tablet-portrait {
+		.nav-menu {
+			text-align: center;
+			display: block;
+			position: inherit;
+			text-align: right;
+			margin: 0;
+			padding: 0;
+			background: none;
+
+			ul {
+				display: inline;
+			}
+			h6 {
+				font-size: 1em;
+				width: auto;
+				margin: 0;
+				padding: .1em .5em;
+			}
+			li {
+				width: auto;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				margin-left: 3em;
+			}
+			li:first-child {
+				margin-left: 0;
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+			li.highlighted {
+				padding: .6em 1.2em;
+				border-radius: 300px;
+			}
+			li:hover {
+				font-size: 1em;
+			}
+			li.Language {
+				position: inherit;
+				display: inline-block;
+				margin-left: 3em;
+				margin-bottom: 0;
+				h6 {
+					padding: .3em 1em;
+				}
+				h6.highlighted {
+					padding: .3em 1em;
+				}
+			}
+		}
+
+		.Menu {
+			display: none !important;
+		}
+	}
+}

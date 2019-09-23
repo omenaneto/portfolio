@@ -1,0 +1,39 @@
+@import "../../../../Containers//Props.scss";
+
+ul.JobCard {
+	text-shadow: none;
+	border-radius: 25px;
+	padding: 1em 0;
+	list-style-type: none;
+	h4 {
+		margin-top: 0;
+		font-size: 1.25em;
+		text-align: left;
+	}
+	h5 {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		text-align: left;
+	}
+
+	li {
+		text-align: justify;
+		text-justify: newspaper;
+		padding: 0;
+		margin: 0;
+		ul {
+			font-size: 1em;
+			box-shadow: none;
+			list-style-type: disc;
+
+			margin: 0;
+			padding-left: 1em;
+			li {
+				color: color(accent);
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+@import "../../../Containers/Props.scss";
+
+.Logo {
+	cursor: pointer;
+	width: auto;
+	margin: auto 0;
+	div {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		svg {
+			fill: color(accent);
+			margin: 0;
+			padding: 0;
+		}
+	}
+	div.leftBracket {
+		padding: 0;
+		margin: 0;
+		svg {
+			padding-right: .1em;
+			height: 1.8em;
+		}
+	}
+	div.nameLogo {
+		transition: $short-transition;
+		padding: 0;
+		margin: 0;
+		width: 1.9em;
+		overflow: hidden;
+		svg {
+			width: auto;
+			height: 1.6em;
+		}
+	}
+	div.rightBracket {
+		padding: 0;
+		margin: 0;
+		svg {
+			height: 1.8em;
+		}
+	}
+}
+.Logo:hover {
+	div.nameLogo {
+		width: 12.2em;
+	}
+}
+
+@include desktop {
+	.Logo {
+		div.leftBracket {
+			svg {
+				padding-right: .1em;
+				height: 2.2em;
+			}
+		}
+		div.nameLogo {
+			width: 2.4em;
+			svg {
+				width: auto;
+				height: 2em;
+			}
+		}
+		div.rightBracket {
+			svg {
+				height: 2.2em;
+			}
+		}
+	}
+	.Logo:hover {
+		div.nameLogo {
+			width: 15.2em;
+		}
+	}
+}
