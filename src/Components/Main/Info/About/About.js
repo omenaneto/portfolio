@@ -28,7 +28,7 @@ const About = (props) => {
 				<div>Mern Stack</div> <div>Firebase</div> <div>SQL</div> <div>MongoDB</div> <div>RESTfull</div>{' '}
 				<div>Flutter</div> <div>Dart</div> <div>C++</div> <div>C#</div> <div>React / React Native</div>{' '}
 				<div>App Development</div> <div>Web Development</div> <div>VR/AR</div> <div>Software Engineering</div>{' '}
-				<div>Product Design</div> <div>UI/UX</div> <div>Frontend Design</div> <div>SCRUM</div>{' '}
+				<div>Product Design</div> <div>UI/UX</div> <div>Frontend Design</div> <div>SCRUM</div> <div>Lean</div>{' '}
 				<div>Project Management</div>
 				<h3>{languagesTitle}</h3>
 				<p>{languages}</p>

@@ -30,7 +30,7 @@ const Heading = (props) => {
 			<div className='Heading'>
 				<h1 className='Title'>Milton Neto</h1>
 				<hr />
-				<h2 className='SubTitle'>Full Stack Developer & Designer</h2>
+				<h2 className='SubTitle'>Full Stack Developer & Product Manager</h2>
 			</div>
 		);
 	}

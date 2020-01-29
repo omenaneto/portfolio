@@ -58,10 +58,10 @@ const Info = (props) => {
 		else if (props.page === 3) {
 			let cta;
 			if (props.laguageSelected === "en") {
-				cta = <Cta page={props.page} laguageSelected={props.laguageSelected} job='message' title='Send Message' icon='fa fa-envelope' />;
+				cta = <Cta page={props.page} laguageSelected={props.laguageSelected} job='message' title='Send Message' icon='fa fa-envelope' url='mailto:omenaneto@gmail.com?Subject=Hello%20Milton' />;
 			}
 			else if (props.laguageSelected === "pt") {
-				cta = <Cta page={props.page} laguageSelected={props.laguageSelected} job='message' title='Enviar Mensagem' icon='fa fa-envelope' />;
+				cta = <Cta page={props.page} laguageSelected={props.laguageSelected} job='message' title='Enviar Mensagem' icon='fa fa-envelope' url='mailto:omenaneto@gmail.com?Subject=Olá%20Milton' />;
 			}
 			return (
 				<div className='Info'>
